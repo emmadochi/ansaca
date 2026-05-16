@@ -87,6 +87,11 @@ window.ANSACA_TRANSLATIONS = {
         "news-radio-title": "ANSACA ED Live on ABS 88.5 FM Awka",
         "news-radio-desc": "Join Dr. Nkem Okeke for an interactive session on HIV/AIDS awareness and agency updates live on the Anambra Broadcasting Service.",
 
+        // News: Policy Inauguration
+        "news-policy-tag": "STRATEGIC POLICY",
+        "news-policy-title": "ANSACA Inaugurates Committee to Review HIV Workplace Policy",
+        "news-policy-desc": "The Agency has inaugurated a Technical Committee to reposition the Anambra State HIV Workplace Policy, fostering a stigma-free and productive workforce.",
+
         // Common
         "get-started": "Get Started",
         "learn-more": "Learn More",
@@ -156,6 +161,11 @@ window.ANSACA_TRANSLATIONS = {
         "news-radio-tag": "MMEMME LIVE",
         "news-radio-title": "ANSACA ED nọ na ABS 88.5 FM Awka",
         "news-radio-desc": "Soro Dr. Nkem Okeke maka mmemme mmekọrịta gbasara mmata HIV/AIDS na mmelite ụlọ ọrụ na Anambra Broadcasting Service.",
+
+        // News: Policy Inauguration
+        "news-policy-tag": "ATỤMATỤ ATỤMATỤ",
+        "news-policy-title": "ANSACA Ewepụtala Kọmitii Maka Ntụle Atụmatụ HIV n'Ebe Ọrụ",
+        "news-policy-desc": "Ụlọ ọrụ ahụ ewepụtala Kọmitii Nkà na Ụzụ iji rụgharịa Atụmatụ HIV n'Ebe Ọrụ na Anambra State, na-akwalite ndị ọrụ na-enweghị ajọ mbunobi.",
 
         // Testimonials Section
         "testimonials-tag": "OLU OBODO",
