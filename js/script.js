@@ -71,7 +71,11 @@ window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     const progress = document.querySelector('.preloader-progress');
     const content = document.querySelector('.preloader-content');
+    const panelLeft = document.querySelector('.panel-left');
+    const panelRight = document.querySelector('.panel-right');
     
+    if (!preloader) return;
+
     const tl = gsap.timeline();
     
     // Smoothly finish progress bar
@@ -80,22 +84,26 @@ window.addEventListener('load', () => {
         duration: 0.8,
         ease: 'power2.inOut'
     })
-    // Fade out central content
+    // Fade and shrink out central content
     .to(content, {
         opacity: 0,
-        scale: 0.8,
+        scale: 0.5,
         duration: 0.5,
         ease: 'power2.in'
     })
-    // Slide up the entire preloader overlay
-    .to(preloader, {
-        y: '-100%',
-        duration: 0.8,
-        ease: 'power4.inOut'
-    })
-    // Remove from DOM to keep it clean
+    // Cinematic Splitting Effect (Tearing from center)
+    .to(panelLeft, {
+        x: '-100%',
+        duration: 1.2,
+        ease: 'expo.inOut'
+    }, "-=0.2")
+    .to(panelRight, {
+        x: '100%',
+        duration: 1.2,
+        ease: 'expo.inOut'
+    }, "<")
+    // Cleanup
     .set(preloader, { display: 'none' })
-    // Re-enable scroll (if it was disabled)
     .set(document.body, { overflow: 'auto' });
 });
 
