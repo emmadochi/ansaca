@@ -12,6 +12,7 @@ window.ANSACA_I18N = {
         localStorage.setItem('ansaca_lang', lang);
         this.updateUI();
         this.updateToggleButtons();
+        this.refreshIcons();
     },
     
     updateUI() {
@@ -50,14 +51,20 @@ window.ANSACA_I18N = {
                 btn.classList.add('text-white/40');
             }
         });
+    },
+
+    refreshIcons() {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 };
 
-// Initialize i18n
-document.addEventListener('DOMContentLoaded', () => window.ANSACA_I18N.init());
-
-// Initialize Lucide Icons
-lucide.createIcons();
+// Initialize everything on DOM Content Loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.ANSACA_I18N.init();
+    window.ANSACA_I18N.refreshIcons();
+});
 
 // Initialize Lenis Smooth Scroll
 const lenis = new Lenis({
