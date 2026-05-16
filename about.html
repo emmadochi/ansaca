@@ -42,11 +42,12 @@
 <body class="font-sans text-gray-800 bg-softGray antialiased overflow-x-hidden selection:bg-secondary selection:text-white">
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.location.href='index.html'">
                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
                         <i data-lucide="shield-plus"></i>
                     </div>
@@ -59,7 +60,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">About Us</a>
+                    <a href="about.html" class="text-sm font-medium text-secondary">About Us</a>
                     <a href="services.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Services</a>
                     <a href="impact.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Impact</a>
                     <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Contact</a>
@@ -68,26 +69,35 @@
                 <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="contact.html" class="px-6 py-2.5 rounded-full bg-primary text-white text-sm font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg">Contact Agency</a>
-                    <a href="services.html" class="px-6 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg animate-pulse-slow">Get Tested</a>
+                    <a href="index.html#testing" class="px-6 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg animate-pulse-slow">Get Tested</a>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none relative z-[110]">
+                        <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                        <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">Home</a>
-                <a href="about.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">About Us</a>
-                <a href="services.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">Services</a>
-                <a href="impact.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">Impact</a>
-                <a href="contact.html" class="block mt-4 px-3 py-3 text-center rounded-lg bg-primary text-white font-medium">Contact Agency</a>
+        <!-- Professional Full-Screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-primary z-[105] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-500">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-secondary/10 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full filter blur-3xl translate-x-1/3 translate-y-1/3"></div>
+            
+            <div class="flex flex-col items-center space-y-6 relative z-10">
+                <a href="index.html" class="text-3xl font-heading font-bold text-white hover:text-secondary transition-colors">Home</a>
+                <a href="about.html" class="text-3xl font-heading font-bold text-secondary">About Us</a>
+                <a href="services.html" class="text-3xl font-heading font-bold text-white hover:text-secondary transition-colors">Services</a>
+                <a href="impact.html" class="text-3xl font-heading font-bold text-white hover:text-secondary transition-colors">Impact</a>
+                <a href="contact.html" class="text-3xl font-heading font-bold text-white hover:text-secondary transition-colors">Contact</a>
+                
+                <div class="pt-8 flex flex-col items-center gap-4 w-full px-8">
+                    <a href="contact.html" class="w-full text-center py-4 rounded-full bg-white text-primary font-bold shadow-xl">Contact Agency</a>
+                    <a href="index.html#testing" class="w-full text-center py-4 rounded-full bg-accent text-white font-bold shadow-xl">Get Tested Now</a>
+                </div>
             </div>
         </div>
     </nav>

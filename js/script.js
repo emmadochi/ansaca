@@ -36,12 +36,58 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile Menu Toggle
+// Mobile Menu Toggle with GSAP
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+const closeIcon = mobileMenuBtn.querySelector('.close-icon');
+let isMenuOpen = false;
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+        // Open Menu
+        mobileMenu.classList.remove('pointer-events-none');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden'); // Lock scroll
+        
+        gsap.to(mobileMenu, {
+            opacity: 1,
+            duration: 0.5,
+            ease: 'power3.out'
+        });
+        
+        gsap.fromTo('#mobile-menu a', 
+            { y: 30, opacity: 0 }, 
+            { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: 'back.out(1.7)', delay: 0.2 }
+        );
+    } else {
+        // Close Menu
+        mobileMenu.classList.add('pointer-events-none');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden'); // Unlock scroll
+        
+        gsap.to(mobileMenu, {
+            opacity: 0,
+            duration: 0.4,
+            ease: 'power3.in'
+        });
+    }
+});
+
+// Close menu on link click
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        isMenuOpen = false;
+        mobileMenu.classList.add('pointer-events-none');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+        gsap.to(mobileMenu, { opacity: 0, duration: 0.3 });
+    });
 });
 
 // Initial GSAP Animations
@@ -98,37 +144,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.utils.toArray('.service-card').forEach((card, index) => {
         gsap.from(card, {
             scrollTrigger: {
-                trigger: '#services',
-                start: "top 75%",
+                trigger: card, // Changed to individual trigger for better mobile performance
+                start: "top 90%",
             },
             y: 50,
             opacity: 0,
             duration: 0.6,
-            delay: index * 0.1,
             ease: 'power3.out'
         });
-    });
-
-    gsap.from('.about-image', {
-        scrollTrigger: {
-            trigger: '#about',
-            start: "top 75%",
-        },
-        x: -50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    });
-
-    gsap.from('.about-text', {
-        scrollTrigger: {
-            trigger: '#about',
-            start: "top 75%",
-        },
-        x: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
     });
 
     // ── Reusable counter animation function ───────────────────────────────
@@ -149,38 +172,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
         requestAnimationFrame(step);
     }
 
-    // ── Hero card counters — fire 1.2s after page load ────────────────────
-    const heroCounters = document.querySelectorAll('.hero-cards .counter');
+    // ── Hero card counters — fire 1.5s after page load ────────────────────
+    const heroCounters = document.querySelectorAll('.hero-counter');
     if (heroCounters.length) {
-        setTimeout(() => heroCounters.forEach(animateCounter), 1200);
+        setTimeout(() => heroCounters.forEach(animateCounter), 1500);
     }
 
     // ── Impact section counters — fire when scrolled into view ────────────
     const impactCounters = document.querySelectorAll('#impact .counter');
-    let impactCounted = false;
-    ScrollTrigger.create({
-        trigger: '#impact',
-        start: 'top 80%',
-        once: true,
-        onEnter: () => {
-            if (!impactCounted) {
-                impactCounted = true;
+    if (impactCounters.length) {
+        ScrollTrigger.create({
+            trigger: '#impact',
+            start: 'top 80%',
+            once: true,
+            onEnter: () => {
                 impactCounters.forEach(animateCounter);
             }
-        }
-    });
+        });
+    }
 
     // News Cards Animation
     gsap.utils.toArray('article').forEach((article, index) => {
         gsap.from(article, {
             scrollTrigger: {
-                trigger: '#news',
-                start: "top 80%",
+                trigger: article,
+                start: "top 90%",
             },
             y: 40,
             opacity: 0,
             duration: 0.6,
-            delay: index * 0.15,
             ease: 'power3.out'
         });
     });
@@ -192,15 +212,19 @@ const chatbotBtn = document.getElementById('chatbot-btn');
 const chatbotWindow = document.getElementById('chatbot-window');
 const closeChatbot = document.getElementById('close-chatbot');
 
-chatbotBtn.addEventListener('click', () => {
-    chatbotWindow.classList.remove('hidden');
-    gsap.fromTo(chatbotWindow, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' });
-    chatbotBtn.classList.add('hidden');
-});
+if (chatbotBtn) {
+    chatbotBtn.addEventListener('click', () => {
+        chatbotWindow.classList.remove('hidden');
+        gsap.fromTo(chatbotWindow, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' });
+        chatbotBtn.classList.add('hidden');
+    });
+}
 
-closeChatbot.addEventListener('click', () => {
-    gsap.to(chatbotWindow, { scale: 0.8, opacity: 0, duration: 0.2, onComplete: () => {
-        chatbotWindow.classList.add('hidden');
-        chatbotBtn.classList.remove('hidden');
-    }});
-});
+if (closeChatbot) {
+    closeChatbot.addEventListener('click', () => {
+        gsap.to(chatbotWindow, { scale: 0.8, opacity: 0, duration: 0.2, onComplete: () => {
+            chatbotWindow.classList.add('hidden');
+            chatbotBtn.classList.remove('hidden');
+        }});
+    });
+}
