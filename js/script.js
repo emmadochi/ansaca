@@ -1,3 +1,61 @@
+// i18n Language Engine
+window.ANSACA_I18N = {
+    currentLang: localStorage.getItem('ansaca_lang') || 'en',
+    
+    init() {
+        this.updateUI();
+        this.updateToggleButtons();
+    },
+    
+    setLanguage(lang) {
+        this.currentLang = lang;
+        localStorage.setItem('ansaca_lang', lang);
+        this.updateUI();
+        this.updateToggleButtons();
+    },
+    
+    updateUI() {
+        const dict = window.ANSACA_TRANSLATIONS[this.currentLang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dict[key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = dict[key];
+                } else {
+                    el.innerText = dict[key];
+                }
+            }
+        });
+    },
+    
+    updateToggleButtons() {
+        // Desktop toggles
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.classList.contains(this.currentLang)) {
+                btn.classList.add('bg-secondary', 'text-white');
+                btn.classList.remove('text-gray-400');
+            } else {
+                btn.classList.remove('bg-secondary', 'text-white');
+                btn.classList.add('text-gray-400');
+            }
+        });
+        
+        // Mobile toggles
+        document.querySelectorAll('.lang-btn-mob').forEach(btn => {
+            if (btn.classList.contains(this.currentLang)) {
+                btn.classList.add('bg-white/20', 'text-white');
+                btn.classList.remove('text-white/40');
+            } else {
+                btn.classList.remove('bg-white/20', 'text-white');
+                btn.classList.add('text-white/40');
+            }
+        });
+    }
+};
+
+// Initialize i18n
+document.addEventListener('DOMContentLoaded', () => window.ANSACA_I18N.init());
+
 // Initialize Lucide Icons
 lucide.createIcons();
 
@@ -38,13 +96,15 @@ window.addEventListener('scroll', () => {
 
 // Mobile Menu Toggle with GSAP
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenuInternalBtn = document.getElementById('close-menu-internal');
 const mobileMenu = document.getElementById('mobile-menu');
 const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
 const closeIcon = mobileMenuBtn.querySelector('.close-icon');
 let isMenuOpen = false;
 
-mobileMenuBtn.addEventListener('click', () => {
-    isMenuOpen = !isMenuOpen;
+function toggleMenu(forceClose = false) {
+    if (forceClose) isMenuOpen = false;
+    else isMenuOpen = !isMenuOpen;
     
     if (isMenuOpen) {
         // Open Menu
@@ -61,15 +121,15 @@ mobileMenuBtn.addEventListener('click', () => {
         
         // Staggered reveal for menu content
         const tl = gsap.timeline();
-        tl.fromTo('#mobile-menu a, #mobile-menu p, #mobile-menu .bg-white\/5', 
-            { y: 20, opacity: 0, scale: 0.95 }, 
+        tl.fromTo('#mobile-menu a, #mobile-menu p, #mobile-menu .bg-white\/5, #mobile-menu button', 
+            { y: 15, opacity: 0, scale: 0.98 }, 
             { 
                 y: 0, 
                 opacity: 1, 
                 scale: 1, 
-                duration: 0.5, 
-                stagger: 0.05, 
-                ease: 'back.out(1.2)', 
+                duration: 0.4, 
+                stagger: 0.03, 
+                ease: 'power3.out', 
                 delay: 0.1 
             }
         );
@@ -86,18 +146,17 @@ mobileMenuBtn.addEventListener('click', () => {
             ease: 'power2.in'
         });
     }
-});
+}
+
+mobileMenuBtn.addEventListener('click', () => toggleMenu());
+
+if (mobileMenuInternalBtn) {
+    mobileMenuInternalBtn.addEventListener('click', () => toggleMenu(true));
+}
 
 // Close menu on link click
 document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        isMenuOpen = false;
-        mobileMenu.classList.add('pointer-events-none');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-        gsap.to(mobileMenu, { opacity: 0, duration: 0.3 });
-    });
+    link.addEventListener('click', () => toggleMenu(true));
 });
 
 // Initial GSAP Animations

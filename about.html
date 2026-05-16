@@ -38,6 +38,7 @@
             }
         }
     </script>
+    <script src="js/translations.js"></script>
 </head>
 <body class="font-sans text-gray-800 bg-softGray antialiased overflow-x-hidden selection:bg-secondary selection:text-white">
 
@@ -59,11 +60,18 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-medium text-secondary">About Us</a>
-                    <a href="services.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Services</a>
-                    <a href="impact.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Impact</a>
-                    <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Contact</a>
+                    <a href="index.html" data-i18n="nav-home" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Home</a>
+                    <a href="about.html" data-i18n="nav-about" class="text-sm font-medium text-secondary">About Us</a>
+                    <a href="services.html" data-i18n="nav-services" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Services</a>
+                    <a href="impact.html" data-i18n="nav-impact" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Impact</a>
+                    <a href="contact.html" data-i18n="nav-contact" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100/50 border border-gray-200 ml-4">
+                        <button onclick="window.ANSACA_I18N.setLanguage('en')" class="lang-btn en text-[10px] font-bold px-2 py-0.5 rounded-md transition-all">EN</button>
+                        <div class="w-px h-3 bg-gray-300"></div>
+                        <button onclick="window.ANSACA_I18N.setLanguage('ig')" class="lang-btn ig text-[10px] font-bold px-2 py-0.5 rounded-md text-gray-400 hover:text-secondary transition-all">IG</button>
+                    </div>
                 </div>
 
                 <!-- CTA Button -->
@@ -86,60 +94,71 @@
     
     <!-- Professional Full-Screen Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-gradient-to-br from-primary via-primary to-secondary/20 z-[105] flex flex-col opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto">
+        <!-- Close Button (Inside Overlay) -->
+        <button id="close-menu-internal" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all z-20">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
         <!-- Background Decorative Elements -->
         <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full filter blur-[120px]"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent/5 rounded-full filter blur-[120px]"></div>
         
-        <div class="flex flex-col min-h-screen px-8 pt-24 pb-12 relative z-10">
+        <div class="flex flex-col min-h-screen px-7 pt-20 pb-10 relative z-10">
             <!-- Navigation Links with Icons -->
-            <div class="flex flex-col space-y-2 mb-12">
-                <p class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-4 ml-2">Main Navigation</p>
-                <a href="index.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                    <i data-lucide="home" class="w-6 h-6 text-secondary"></i> Home
+            <div class="flex flex-col space-y-1.5 mb-8">
+                <div class="flex justify-between items-center mb-3 ml-2 pr-4">
+                    <p data-i18n="section-main-nav" class="text-white/30 text-[8px] uppercase tracking-[0.25em] font-bold">Main Navigation</p>
+                    <div class="flex items-center gap-2 px-2 py-1 rounded-lg bg-white/5 border border-white/10">
+                        <button onclick="window.ANSACA_I18N.setLanguage('en')" class="lang-btn-mob en text-[9px] font-bold text-white px-2 py-0.5 rounded transition-all">EN</button>
+                        <button onclick="window.ANSACA_I18N.setLanguage('ig')" class="lang-btn-mob ig text-[9px] font-bold text-white/40 px-2 py-0.5 rounded transition-all">IG</button>
+                    </div>
+                </div>
+                <a href="index.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="home" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-home">Home</span>
                 </a>
-                <a href="about.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl bg-white/10 text-secondary text-2xl font-heading font-bold border border-white/10">
-                    <i data-lucide="info" class="w-6 h-6"></i> About Us
+                <a href="about.html" class="flex items-center gap-4 py-3 px-4 rounded-xl bg-white/10 text-secondary text-lg font-heading font-bold border border-white/10">
+                    <i data-lucide="info" class="w-[18px] h-[18px]"></i> <span data-i18n="nav-about">About Us</span>
                 </a>
-                <a href="services.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                    <i data-lucide="heart-pulse" class="w-6 h-6 text-secondary"></i> Services
+                <a href="services.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="heart-pulse" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-services">Services</span>
                 </a>
-                <a href="impact.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                    <i data-lucide="bar-chart-3" class="w-6 h-6 text-secondary"></i> Our Impact
+                <a href="impact.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="bar-chart-3" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-impact">Our Impact</span>
                 </a>
-                <a href="contact.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                    <i data-lucide="mail" class="w-6 h-6 text-secondary"></i> Contact
+                <a href="contact.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="mail" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-contact">Contact</span>
                 </a>
             </div>
             
             <!-- Quick Contact Card -->
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 mb-8 mt-auto">
-                <p class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Quick Support</p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
-                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 mb-6 mt-auto">
+                <p class="text-white/30 text-[8px] uppercase tracking-[0.25em] font-bold mb-3">Quick Support</p>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
                         </div>
                         <div>
-                            <p class="text-white font-bold text-sm">0906 048 6600</p>
-                            <p class="text-white/50 text-xs">Emergency Helpline</p>
+                            <p class="text-white font-bold text-[11px]">0906 048 6600</p>
+                            <p class="text-white/40 text-[9px]">Emergency Helpline</p>
                         </div>
                     </div>
-                    <a href="index.html#testing" class="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-accent text-white font-bold shadow-lg shadow-accent/20">
-                        <i data-lucide="check-circle-2" class="w-5 h-5"></i> Get Tested Now
+                    <a href="index.html#testing" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-accent text-white text-xs font-bold shadow-lg shadow-accent/20">
+                        <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Get Tested Now
                     </a>
                 </div>
             </div>
             
             <!-- Social & Footer -->
-            <div class="flex justify-between items-center px-2">
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <div class="flex justify-between items-center px-1">
+                <div class="flex gap-2.5">
+                    <a href="https://www.facebook.com/AnambraSACA/" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-white transition-colors border border-white/10"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-white transition-colors border border-white/10"><i data-lucide="twitter" class="w-3.5 h-3.5"></i></a>
+                    <a href="https://www.instagram.com/ansaca_ng/" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-white transition-colors border border-white/10"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
                 </div>
                 <div class="text-right">
-                    <p class="text-white/30 text-[10px]">© 2026 ANSACA</p>
-                    <p class="text-white/30 text-[10px]">Awka, Anambra State</p>
+                    <p class="text-white/20 text-[8px]">© 2026 ANSACA</p>
+                    <p class="text-white/20 text-[8px]">Awka, Anambra State</p>
                 </div>
             </div>
         </div>
@@ -282,9 +301,9 @@
                         Leading the fight against HIV/AIDS in Anambra State through comprehensive care, awareness, and community empowerment.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="https://www.facebook.com/AnambraSACA/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/ansaca_ng/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                     </div>
                 </div>
                 
