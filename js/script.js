@@ -55,13 +55,23 @@ mobileMenuBtn.addEventListener('click', () => {
         
         gsap.to(mobileMenu, {
             opacity: 1,
-            duration: 0.5,
-            ease: 'power3.out'
+            duration: 0.4,
+            ease: 'power2.out'
         });
         
-        gsap.fromTo('#mobile-menu a', 
-            { y: 30, opacity: 0 }, 
-            { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: 'back.out(1.7)', delay: 0.2 }
+        // Staggered reveal for menu content
+        const tl = gsap.timeline();
+        tl.fromTo('#mobile-menu a, #mobile-menu p, #mobile-menu .bg-white\/5', 
+            { y: 20, opacity: 0, scale: 0.95 }, 
+            { 
+                y: 0, 
+                opacity: 1, 
+                scale: 1, 
+                duration: 0.5, 
+                stagger: 0.05, 
+                ease: 'back.out(1.2)', 
+                delay: 0.1 
+            }
         );
     } else {
         // Close Menu
@@ -72,8 +82,8 @@ mobileMenuBtn.addEventListener('click', () => {
         
         gsap.to(mobileMenu, {
             opacity: 0,
-            duration: 0.4,
-            ease: 'power3.in'
+            duration: 0.3,
+            ease: 'power2.in'
         });
     }
 });
