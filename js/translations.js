@@ -82,6 +82,11 @@ window.ANSACA_TRANSLATIONS = {
         "feat-story-body-2": "A joint delegation provided food items, welfare materials, and financial support. Dr. Nkem Okeke (ANSACA ED) assured that this intervention would be a sustained effort with continuous monitoring to ensure full recovery.",
         "feat-story-quote": "Solution Is Here! Know your status. Stay healthy. Protect others.",
 
+        // News: Radio Broadcast
+        "news-radio-tag": "LIVE PROGRAMME",
+        "news-radio-title": "ANSACA ED Live on ABS 88.5 FM Awka",
+        "news-radio-desc": "Join Dr. Nkem Okeke for an interactive session on HIV/AIDS awareness and agency updates live on the Anambra Broadcasting Service.",
+
         // Common
         "get-started": "Get Started",
         "learn-more": "Learn More",
@@ -143,9 +148,14 @@ window.ANSACA_TRANSLATIONS = {
         "feat-story-tag": "MMEMME PỤRỤ ICHE",
         "feat-story-title": "Nwunye Gọvanọ Kpọkọtara Nkwado Maka Ifechukwu na Regina Caeli Hospital",
         "feat-story-desc": "N'ịgbaso akụkọ banyere nwa agbọghọ na-alụso ọrịa HIV ọgụ, ANSACA na Her Excellency, Chief Dr. Mrs. Nonye Soludo, wepụtara nkwado enyemaka mmadụ.",
-        "feat-story-body-1": "Her Excellency tinyere aka ozugbo site na Healthy Living Initiative, na-enye nkwado maka ọgwụgwọ na ọdịmma nwa ahù. Nzaghachi a na-egosipụta ntinye aka nke ọchịchị Soludo n'ichebe ahụike na ugwu nke Ndi Anambra.",
+        "feat-story-body-1": "Her Excellency tinyere aka ozugbo site na Healthy Living Initiative, na-enye nkwado maka ọgwụgwọ na ọdịmma nwa ahụ. Nzaghachi a na-egosipụta ntinye aka nke ọchịchị Soludo n'ichebe ahụike na ugwu nke Ndi Anambra.",
         "feat-story-body-2": "Ndị nnọchi anya jikọrọ ọnụ wetara nri, ihe eji elekọta mmadụ, na nkwado ego. Dr. Nkem Okeke mesiri obi ike na ntinye aka a ga-abụ nke na-aga n'ihu iji hụ na nwa ahụ gbakere kpamkpam.",
         "feat-story-quote": "Ngwọta Adịla! Mara ọkwa gị. Nọgidenụ na-enwe ahụike. Chebe ndị ọzọ.",
+
+        // News: Radio Broadcast
+        "news-radio-tag": "MMEMME LIVE",
+        "news-radio-title": "ANSACA ED nọ na ABS 88.5 FM Awka",
+        "news-radio-desc": "Soro Dr. Nkem Okeke maka mmemme mmekọrịta gbasara mmata HIV/AIDS na mmelite ụlọ ọrụ na Anambra Broadcasting Service.",
 
         // Testimonials Section
         "testimonials-tag": "OLU OBODO",
