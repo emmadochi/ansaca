@@ -610,50 +610,77 @@
                 </div>
                 <!-- Navigation Arrows -->
                 <div class="flex gap-4">
-                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group">
+                    <button id="prev-testimonial" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group active:scale-95">
                         <i data-lucide="chevron-left" class="w-5 h-5 group-hover:-translate-x-0.5 transition-transform"></i>
                     </button>
-                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group">
+                    <button id="next-testimonial" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group active:scale-95">
                         <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Testimonial Card 1 -->
-                <div class="testimonial-card p-8 md:p-10 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 relative group hover:bg-white/10 transition-all duration-500">
-                    <div class="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i data-lucide="quote" class="w-12 h-12 text-white"></i>
-                    </div>
-                    <p data-i18n="testimonial-1-quote" class="text-white/90 text-xl md:text-2xl leading-relaxed mb-10 font-medium">
-                        "ANSACA gave me my life back. From the first test to the ongoing treatment, the care has been exceptional and completely free of charge."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/10">
-                            <i data-lucide="user" class="w-6 h-6 text-white/50"></i>
+            <div class="testimonial-container relative overflow-hidden -mx-4">
+                <div id="testimonial-track" class="flex transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 px-4">
+                        <div class="testimonial-card p-8 md:p-10 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 relative group hover:bg-white/10 transition-all duration-500 h-full">
+                            <div class="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <i data-lucide="quote" class="w-12 h-12 text-white"></i>
+                            </div>
+                            <p data-i18n="testimonial-1-quote" class="text-white/90 text-xl md:text-2xl leading-relaxed mb-10 font-medium">
+                                "ANSACA gave me my life back. From the first test to the ongoing treatment, the care has been exceptional and completely free of charge."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/10">
+                                    <i data-lucide="user" class="w-6 h-6 text-white/50"></i>
+                                </div>
+                                <div>
+                                    <h4 data-i18n="testimonial-1-name" class="font-bold text-white text-lg">Adebayo O.</h4>
+                                    <p data-i18n="testimonial-1-role" class="text-white/50 text-sm">Anambra Resident & Survivor</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4 data-i18n="testimonial-1-name" class="font-bold text-white text-lg">Adebayo O.</h4>
-                            <p data-i18n="testimonial-1-role" class="text-white/50 text-sm">Anambra Resident & Survivor</p>
-                        </div>
                     </div>
-                </div>
 
-                <!-- Testimonial Card 2 -->
-                <div class="testimonial-card p-8 md:p-10 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 relative group hover:bg-white/10 transition-all duration-500">
-                    <div class="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i data-lucide="quote" class="w-12 h-12 text-white"></i>
-                    </div>
-                    <p data-i18n="testimonial-2-quote" class="text-white/90 text-xl md:text-2xl leading-relaxed mb-10 font-medium">
-                        "Volunteering with the youth initiative has shown me the power of community. We are breaking barriers and building a new Anambra."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/10">
-                            <i data-lucide="user" class="w-6 h-6 text-white/50"></i>
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 px-4">
+                        <div class="testimonial-card p-8 md:p-10 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 relative group hover:bg-white/10 transition-all duration-500 h-full">
+                            <div class="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <i data-lucide="quote" class="w-12 h-12 text-white"></i>
+                            </div>
+                            <p data-i18n="testimonial-2-quote" class="text-white/90 text-xl md:text-2xl leading-relaxed mb-10 font-medium">
+                                "Volunteering with the youth initiative has shown me the power of community. We are breaking barriers and building a new Anambra."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/10">
+                                    <i data-lucide="user" class="w-6 h-6 text-white/50"></i>
+                                </div>
+                                <div>
+                                    <h4 data-i18n="testimonial-2-name" class="font-bold text-white text-lg">Chioma A.</h4>
+                                    <p data-i18n="testimonial-2-role" class="text-white/50 text-sm">Youth Volunteer</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4 data-i18n="testimonial-2-name" class="font-bold text-white text-lg">Chioma A.</h4>
-                            <p data-i18n="testimonial-2-role" class="text-white/50 text-sm">Youth Volunteer</p>
+                    </div>
+
+                    <!-- Testimonial Card 3 (Optional extra for testing) -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 px-4">
+                        <div class="testimonial-card p-8 md:p-10 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 relative group hover:bg-white/10 transition-all duration-500 h-full">
+                            <div class="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <i data-lucide="quote" class="w-12 h-12 text-white"></i>
+                            </div>
+                            <p class="text-white/90 text-xl md:text-2xl leading-relaxed mb-10 font-medium">
+                                "The education we received at UNIZIK was life-changing. We now have the knowledge to protect ourselves and our peers."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/10">
+                                    <i data-lucide="user" class="w-6 h-6 text-white/50"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-lg">Ikenna J.</h4>
+                                    <p class="text-white/50 text-sm">Student Advocate</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

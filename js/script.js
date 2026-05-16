@@ -322,26 +322,82 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 
+    // Testimonial Slider
+    const track = document.getElementById('testimonial-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.getElementById('prev-testimonial');
+    const nextBtn = document.getElementById('next-testimonial');
+
+    if (track && slides.length && prevBtn && nextBtn) {
+        let currentIndex = 0;
+        
+        function updateSlider() {
+            const isMobile = window.innerWidth < 768;
+            const slideWidth = isMobile ? 100 : 50;
+            const maxIndex = isMobile ? slides.length - 1 : slides.length - 2;
+            
+            // Boundary checks
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            if (currentIndex < 0) currentIndex = 0;
+            
+            const offset = currentIndex * slideWidth;
+            track.style.transform = `translateX(-${offset}%)`;
+            
+            // Update button visual states
+            prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+            prevBtn.style.cursor = currentIndex === 0 ? 'not-allowed' : 'pointer';
+            
+            nextBtn.style.opacity = currentIndex === maxIndex ? '0.3' : '1';
+            nextBtn.style.cursor = currentIndex === maxIndex ? 'not-allowed' : 'pointer';
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            const isMobile = window.innerWidth < 768;
+            const maxIndex = isMobile ? slides.length - 1 : slides.length - 2;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+        
+        // Handle window resize to re-calculate offsets
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateSlider, 100);
+        });
+        
+        // Initial setup
+        updateSlider();
+    }
+
+    // Chatbot Mock Toggle
+    const chatbotBtn = document.getElementById('chatbot-btn');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const closeChatbot = document.getElementById('close-chatbot');
+
+    if (chatbotBtn) {
+        chatbotBtn.addEventListener('click', () => {
+            chatbotWindow.classList.remove('hidden');
+            gsap.fromTo(chatbotWindow, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' });
+            chatbotBtn.classList.add('hidden');
+        });
+    }
+
+    if (closeChatbot) {
+        closeChatbot.addEventListener('click', () => {
+            gsap.to(chatbotWindow, { scale: 0.8, opacity: 0, duration: 0.2, onComplete: () => {
+                chatbotWindow.classList.add('hidden');
+                chatbotBtn.classList.remove('hidden');
+            }});
+        });
+    }
+
 });
-
-// Chatbot Mock Toggle
-const chatbotBtn = document.getElementById('chatbot-btn');
-const chatbotWindow = document.getElementById('chatbot-window');
-const closeChatbot = document.getElementById('close-chatbot');
-
-if (chatbotBtn) {
-    chatbotBtn.addEventListener('click', () => {
-        chatbotWindow.classList.remove('hidden');
-        gsap.fromTo(chatbotWindow, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' });
-        chatbotBtn.classList.add('hidden');
-    });
-}
-
-if (closeChatbot) {
-    closeChatbot.addEventListener('click', () => {
-        gsap.to(chatbotWindow, { scale: 0.8, opacity: 0, duration: 0.2, onComplete: () => {
-            chatbotWindow.classList.add('hidden');
-            chatbotBtn.classList.remove('hidden');
-        }});
-    });
-}
