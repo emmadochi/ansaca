@@ -82,67 +82,68 @@
             </div>
         </div>
 
-        <!-- Professional Full-Screen Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-gradient-to-br from-primary via-primary to-secondary/20 z-[105] flex flex-col opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto">
-            <!-- Background Decorative Elements -->
-            <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full filter blur-[120px]"></div>
-            <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent/5 rounded-full filter blur-[120px]"></div>
+    </nav>
+    
+    <!-- Professional Full-Screen Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gradient-to-br from-primary via-primary to-secondary/20 z-[105] flex flex-col opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto">
+        <!-- Background Decorative Elements -->
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full filter blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent/5 rounded-full filter blur-[120px]"></div>
+        
+        <div class="flex flex-col min-h-screen px-8 pt-24 pb-12 relative z-10">
+            <!-- Navigation Links with Icons -->
+            <div class="flex flex-col space-y-2 mb-12">
+                <p class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-4 ml-2">Main Navigation</p>
+                <a href="index.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="home" class="w-6 h-6 text-secondary"></i> Home
+                </a>
+                <a href="about.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="info" class="w-6 h-6 text-secondary"></i> About Us
+                </a>
+                <a href="services.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="heart-pulse" class="w-6 h-6 text-secondary"></i> Services
+                </a>
+                <a href="impact.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="bar-chart-3" class="w-6 h-6 text-secondary"></i> Our Impact
+                </a>
+                <a href="contact.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl bg-white/10 text-secondary text-2xl font-heading font-bold border border-white/10">
+                    <i data-lucide="mail" class="w-6 h-6"></i> Contact
+                </a>
+            </div>
             
-            <div class="flex flex-col min-h-screen px-8 pt-24 pb-12 relative z-10">
-                <!-- Navigation Links with Icons -->
-                <div class="flex flex-col space-y-2 mb-12">
-                    <p class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-4 ml-2">Main Navigation</p>
-                    <a href="index.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                        <i data-lucide="home" class="w-6 h-6 text-secondary"></i> Home
-                    </a>
-                    <a href="about.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                        <i data-lucide="info" class="w-6 h-6 text-secondary"></i> About Us
-                    </a>
-                    <a href="services.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                        <i data-lucide="heart-pulse" class="w-6 h-6 text-secondary"></i> Services
-                    </a>
-                    <a href="impact.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl text-white text-2xl font-heading font-bold hover:bg-white/5 transition-all">
-                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-secondary"></i> Our Impact
-                    </a>
-                    <a href="contact.html" class="flex items-center gap-4 py-4 px-4 rounded-2xl bg-white/10 text-secondary text-2xl font-heading font-bold border border-white/10">
-                        <i data-lucide="mail" class="w-6 h-6"></i> Contact
-                    </a>
-                </div>
-                
-                <!-- Quick Contact Card -->
-                <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 mb-8 mt-auto">
-                    <p class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Quick Support</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
-                                <i data-lucide="phone-call" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <p class="text-white font-bold text-sm">0906 048 6600</p>
-                                <p class="text-white/50 text-xs">Emergency Helpline</p>
-                            </div>
+            <!-- Quick Contact Card -->
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 mb-8 mt-auto">
+                <p class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Quick Support</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i>
                         </div>
-                        <a href="index.html#testing" class="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-accent text-white font-bold shadow-lg shadow-accent/20">
-                            <i data-lucide="check-circle-2" class="w-5 h-5"></i> Get Tested Now
-                        </a>
+                        <div>
+                            <p class="text-white font-bold text-sm">0906 048 6600</p>
+                            <p class="text-white/50 text-xs">Emergency Helpline</p>
+                        </div>
                     </div>
+                    <a href="index.html#testing" class="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-accent text-white font-bold shadow-lg shadow-accent/20">
+                        <i data-lucide="check-circle-2" class="w-5 h-5"></i> Get Tested Now
+                    </a>
                 </div>
-                
-                <!-- Social & Footer -->
-                <div class="flex justify-between items-center px-2">
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-white/30 text-[10px]">© 2026 ANSACA</p>
-                        <p class="text-white/30 text-[10px]">Awka, Anambra State</p>
-                    </div>
+            </div>
+            
+            <!-- Social & Footer -->
+            <div class="flex justify-between items-center px-2">
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors border border-white/10"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                </div>
+                <div class="text-right">
+                    <p class="text-white/30 text-[10px]">© 2026 ANSACA</p>
+                    <p class="text-white/30 text-[10px]">Awka, Anambra State</p>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <!-- Page Header -->
     <section class="pt-32 pb-16 bg-primary relative overflow-hidden">
