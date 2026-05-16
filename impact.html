@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANSACA | Anambra State AIDS Control Agency</title>
+    <meta name="description" content="Anambra State AIDS Control Agency (ANSACA) - Empowering communities through HIV/AIDS awareness, prevention, treatment, and support services in Awka, Nigeria.">
+    <meta name="keywords" content="Anambra State AIDS Control Agency, AIDS control agency in Anambra, HIV awareness in Anambra State, Government HIV support programs in Nigeria, Public health agencies in Anambra State, HIV testing and counseling in Awka">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B3C5D',
+                        secondary: '#00A6A6',
+                        accent: '#E63946',
+                        softGray: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-softGray antialiased overflow-x-hidden selection:bg-secondary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                        <i data-lucide="shield-plus"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-heading font-bold text-xl leading-tight text-primary">ANSACA</h1>
+                        <p class="text-[10px] tracking-wider text-gray-500 uppercase font-medium">Anambra State Gov.</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">About Us</a>
+                    <a href="services.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Services</a>
+                    <a href="impact.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Impact</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="px-6 py-2.5 rounded-full bg-primary text-white text-sm font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg">Contact Agency</a>
+                    <a href="services.html" class="px-6 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg animate-pulse-slow">Get Tested</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">Home</a>
+                <a href="about.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">About Us</a>
+                <a href="services.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">Services</a>
+                <a href="impact.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:text-secondary hover:bg-gray-50 rounded-md">Impact</a>
+                <a href="contact.html" class="block mt-4 px-3 py-3 text-center rounded-lg bg-primary text-white font-medium">Contact Agency</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-accent relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=2000&q=80" alt="Impact" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-r from-accent to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Our Impact</h1>
+                <p class="text-white/90 max-w-2xl mx-auto">See the measurable difference ANSACA is making across Anambra State communities through dedicated effort and strategic partnerships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Section -->
+    <section id="impact" class="py-24 bg-primary text-white relative overflow-hidden">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full mix-blend-overlay filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 section-header">
+                <h2 class="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Our Impact</h2>
+                <h3 class="font-heading text-4xl font-bold mb-4">Making a Measurable Difference</h3>
+                <p class="text-gray-300 text-lg">Through dedicated effort and community partnerships, ANSACA is actively changing the narrative of HIV/AIDS in Anambra State.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-item text-center p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-secondary/20 flex items-center justify-center text-secondary mb-4">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-4xl font-bold font-heading mb-2"><span class="counter" data-target="2.5">0</span>M+</h4>
+                    <p class="text-sm text-gray-300">Citizens Reached</p>
+                </div>
+                <div class="stat-item text-center p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-accent/20 flex items-center justify-center text-accent mb-4">
+                        <i data-lucide="activity" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-4xl font-bold font-heading mb-2"><span class="counter" data-target="150">0</span>k+</h4>
+                    <p class="text-sm text-gray-300">Tests Conducted</p>
+                </div>
+                <div class="stat-item text-center p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-green-500/20 flex items-center justify-center text-green-400 mb-4">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-4xl font-bold font-heading mb-2"><span class="counter" data-target="500">0</span>+</h4>
+                    <p class="text-sm text-gray-300">Schools Visited</p>
+                </div>
+                <div class="stat-item text-center p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                        <i data-lucide="pill" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-4xl font-bold font-heading mb-2"><span class="counter" data-target="95">0</span>%</h4>
+                    <p class="text-sm text-gray-300">Treatment Retention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-softGray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Photo Gallery</h2>
+                <h3 class="font-heading text-4xl font-bold text-gray-900 mb-4">Our Work in the Field</h3>
+                <p class="text-gray-600 text-lg">Moments captured from our campaigns, outreach programs, testing drives, and community engagements across Anambra State.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10" id="gallery-filters">
+                <button class="gallery-filter active-filter px-5 py-2 rounded-full text-sm font-semibold bg-primary text-white shadow-md transition-all" data-filter="all">All Photos</button>
+                <button class="gallery-filter px-5 py-2 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-200 hover:bg-primary hover:text-white hover:border-transparent shadow-sm transition-all" data-filter="outreach">Community Outreach</button>
+                <button class="gallery-filter px-5 py-2 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-200 hover:bg-primary hover:text-white hover:border-transparent shadow-sm transition-all" data-filter="testing">Testing Campaigns</button>
+                <button class="gallery-filter px-5 py-2 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-200 hover:bg-primary hover:text-white hover:border-transparent shadow-sm transition-all" data-filter="education">Education</button>
+                <button class="gallery-filter px-5 py-2 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-200 hover:bg-primary hover:text-white hover:border-transparent shadow-sm transition-all" data-filter="partnerships">Partnerships</button>
+            </div>
+
+            <!-- Masonry Gallery Grid -->
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4" id="gallery-grid">
+
+                <!-- Item 1 - tall -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="outreach" data-title="Community Sensitization in Onitsha" data-caption="ANSACA health workers engage residents at a community health fair in Onitsha LGA.">
+                    <img src="https://images.unsplash.com/photo-1523368749929-6b2bf370d983?auto=format&fit=crop&w=800&q=80" alt="Community Outreach" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 320px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Community Outreach</span>
+                        <h4 class="text-white font-bold text-base leading-tight">Community Sensitization in Onitsha</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 - short -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="testing" data-title="Free HIV Testing Drive – Awka" data-caption="Citizens receive free, confidential HIV testing at our state-wide testing drive in Awka.">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="HIV Testing" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 220px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Testing Campaign</span>
+                        <h4 class="text-white font-bold text-base leading-tight">Free HIV Testing Drive – Awka</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="education" data-title="HIV Awareness Seminar for Students" data-caption="Youth and students at a major HIV/AIDS awareness seminar organized at Nnamdi Azikiwe University.">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80" alt="Youth Education" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 280px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-green-400 uppercase tracking-widest mb-1">Education</span>
+                        <h4 class="text-white font-bold text-base leading-tight">HIV Awareness Seminar for Students</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 - tall -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="partnerships" data-title="MOU Signing with WHO Nigeria" data-caption="ANSACA Director-General signs a landmark MOU with WHO Nigeria representatives to expand treatment access.">
+                    <img src="https://images.unsplash.com/photo-1551076805-e18690c5e53b?auto=format&fit=crop&w=800&q=80" alt="Partnerships" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 300px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest mb-1">Partnerships</span>
+                        <h4 class="text-white font-bold text-base leading-tight">MOU Signing with WHO Nigeria</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="outreach" data-title="Rural Health Outreach – Aguata LGA" data-caption="ANSACA nurses conduct screenings and counseling sessions in underserved rural communities.">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Rural Outreach" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 240px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Community Outreach</span>
+                        <h4 class="text-white font-bold text-base leading-tight">Rural Health Outreach – Aguata LGA</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="testing" data-title="Mobile Testing Unit Deployment" data-caption="A mobile HIV testing van deployed to a market square in Nnewi, bringing testing closer to the people.">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ce122?auto=format&fit=crop&w=800&q=80" alt="Mobile Testing" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 260px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Testing Campaign</span>
+                        <h4 class="text-white font-bold text-base leading-tight">Mobile Testing Unit Deployment</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="education" data-title="Teacher Training Workshop" data-caption="Over 200 secondary school teachers receive comprehensive HIV/AIDS education training to equip their classrooms.">
+                    <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=800&q=80" alt="Teacher Training" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 220px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-green-400 uppercase tracking-widest mb-1">Education</span>
+                        <h4 class="text-white font-bold text-base leading-tight">Teacher Training Workshop</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="partnerships" data-title="World AIDS Day Commemoration" data-caption="ANSACA joins government officials and NGO partners at the annual World AIDS Day commemoration in Awka.">
+                    <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=800&q=80" alt="World AIDS Day" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 300px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest mb-1">Partnerships</span>
+                        <h4 class="text-white font-bold text-base leading-tight">World AIDS Day Commemoration</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-category="outreach" data-title="Women Empowerment Health Fair" data-caption="A dedicated health fair focused on women's HIV/AIDS awareness, organized in partnership with local women groups.">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Women Empowerment" class="w-full object-cover transition-transform duration-500 group-hover:scale-105" style="height: 250px;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Community Outreach</span>
+                        <h4 class="text-white font-bold text-base leading-tight">Women Empowerment Health Fair</h4>
+                        <div class="mt-3 flex items-center gap-2 text-white/70 text-xs">
+                            <i data-lucide="zoom-in" class="w-4 h-4 text-white"></i>
+                            <span>Click to view</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[999] bg-black/90 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full mx-auto">
+            <!-- Close Button -->
+            <button id="lightbox-close" class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium">
+                <i data-lucide="x" class="w-5 h-5"></i> Close
+            </button>
+            <!-- Navigation Arrows -->
+            <button id="lightbox-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-3">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button id="lightbox-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-3">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+            <!-- Image -->
+            <img id="lightbox-img" src="" alt="" class="w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl" />
+            <!-- Caption -->
+            <div class="mt-4 text-center">
+                <h4 id="lightbox-title" class="text-white font-bold text-xl mb-1"></h4>
+                <p id="lightbox-caption" class="text-white/70 text-sm max-w-2xl mx-auto"></p>
+                <p id="lightbox-counter" class="text-white/40 text-xs mt-3"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery & Lightbox Script -->
+    <script>
+    (function() {
+        const filters = document.querySelectorAll('.gallery-filter');
+        const items = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbTitle = document.getElementById('lightbox-title');
+        const lbCaption = document.getElementById('lightbox-caption');
+        const lbCounter = document.getElementById('lightbox-counter');
+
+        let currentItems = Array.from(items);
+        let currentIndex = 0;
+
+        // Filter logic
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filters.forEach(b => {
+                    b.classList.remove('active-filter', 'bg-primary', 'text-white', 'shadow-md');
+                    b.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200', 'shadow-sm');
+                });
+                btn.classList.add('active-filter', 'bg-primary', 'text-white', 'shadow-md');
+                btn.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-200', 'shadow-sm');
+
+                const filter = btn.dataset.filter;
+                items.forEach(item => {
+                    const match = filter === 'all' || item.dataset.category === filter;
+                    item.style.transition = 'opacity 0.3s, transform 0.3s';
+                    if (match) {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                        item.style.display = '';
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => { if (!match) item.style.display = 'none'; }, 300);
+                    }
+                });
+                currentItems = Array.from(items).filter(i => filter === 'all' || i.dataset.category === filter);
+            });
+        });
+
+        // Open lightbox
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                currentIndex = currentItems.indexOf(item);
+                openLightbox(currentIndex);
+            });
+        });
+
+        function openLightbox(index) {
+            const item = currentItems[index];
+            const img = item.querySelector('img');
+            lbImg.src = img.src;
+            lbImg.alt = img.alt;
+            lbTitle.textContent = item.dataset.title || '';
+            lbCaption.textContent = item.dataset.caption || '';
+            lbCounter.textContent = `${index + 1} / ${currentItems.length}`;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+        document.getElementById('lightbox-prev').addEventListener('click', e => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length;
+            openLightbox(currentIndex);
+        });
+
+        document.getElementById('lightbox-next').addEventListener('click', e => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % currentItems.length;
+            openLightbox(currentIndex);
+        });
+
+        document.addEventListener('keydown', e => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length; openLightbox(currentIndex); }
+            if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentItems.length; openLightbox(currentIndex); }
+        });
+    })();
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary">
+                            <i data-lucide="shield-plus"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-heading font-bold text-xl leading-tight text-white">ANSACA</h2>
+                            <p class="text-[10px] tracking-wider text-white/70 uppercase font-medium">Anambra State Gov.</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 text-sm mb-6 leading-relaxed">
+                        Leading the fight against HIV/AIDS in Anambra State through comprehensive care, awareness, and community empowerment.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/70 hover:text-white transition-colors text-sm">About ANSACA</a></li>
+                        <li><a href="services.html" class="text-white/70 hover:text-white transition-colors text-sm">Our Services</a></li>
+                        <li><a href="#news" class="text-white/70 hover:text-white transition-colors text-sm">News & Updates</a></li>
+                        <li><a href="contact.html" class="text-white/70 hover:text-white transition-colors text-sm">Contact Us</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Volunteer Program</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Find a Testing Center</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">HIV/AIDS Facts</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Downloadable Materials</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Partner Organizations</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Health Ministry Portal</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Stay Updated</h4>
+                    <p class="text-white/70 text-sm mb-4">Subscribe to our newsletter for the latest public health updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-3 rounded-l-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary w-full text-sm">
+                        <button type="submit" class="px-4 py-3 rounded-r-xl bg-secondary text-white font-medium hover:bg-opacity-90 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">&copy; 2026 Anambra State AIDS Control Agency. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-white/50 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors text-sm">Terms of Service</a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors text-sm">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Mockup -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="chatbot-btn" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+        </button>
+        
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform origin-bottom-right transition-all">
+            <div class="bg-primary p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                        <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-sm">ANSACA Assistant</h4>
+                        <p class="text-white/70 text-xs">Online</p>
+                    </div>
+                </div>
+                <button id="close-chatbot" class="text-white/70 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div class="h-64 p-4 bg-gray-50 overflow-y-auto flex flex-col gap-3">
+                <div class="bg-white p-3 rounded-xl rounded-tl-none text-sm text-gray-700 shadow-sm border border-gray-100 self-start max-w-[85%]">
+                    Hello! Welcome to ANSACA. How can I assist you with HIV testing or awareness information today?
+                </div>
+            </div>
+            <div class="p-3 border-t border-gray-100 bg-white">
+                <div class="flex items-center gap-2">
+                    <input type="text" placeholder="Type a message..." class="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
+                    <button class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="send" class="w-3 h-3"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
