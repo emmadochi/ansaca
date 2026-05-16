@@ -74,6 +74,14 @@ window.ANSACA_TRANSLATIONS = {
         "testimonial-2-name": "Chioma A.",
         "testimonial-2-role": "Youth Volunteer",
 
+        // Featured Story: Soludo Intervention
+        "feat-story-tag": "FEATURED INTERVENTION",
+        "feat-story-title": "Governor's Wife Rallies Support for Ifechukwu at Regina Caeli Hospital",
+        "feat-story-desc": "Following reports of a young girl battling Advanced HIV Disease, ANSACA mobilized humanitarian support alongside Her Excellency, Chief Dr. Mrs. Nonye Soludo.",
+        "feat-story-body-1": "Her Excellency immediately intervened through the Healthy Living Initiative, extending humanitarian support towards the child’s treatment and welfare. This prompt response reflects the Soludo administration’s commitment to protecting the health and dignity of Ndi Anambra.",
+        "feat-story-body-2": "A joint delegation provided food items, welfare materials, and financial support. Dr. Nkem Okeke (ANSACA ED) assured that this intervention would be a sustained effort with continuous monitoring to ensure full recovery.",
+        "feat-story-quote": "Solution Is Here! Know your status. Stay healthy. Protect others.",
+
         // Common
         "get-started": "Get Started",
         "learn-more": "Learn More",
@@ -130,6 +138,14 @@ window.ANSACA_TRANSLATIONS = {
         // Impact Page
         "impact-page-title": "Mmetụta Anyị",
         "impact-page-desc": "Ịtụle ọganihu anyị na ịkekọrịta akụkọ banyere olileanya na ahụike n'ofe obodo Anambra.",
+
+        // Featured Story: Soludo Intervention
+        "feat-story-tag": "MMEMME PỤRỤ ICHE",
+        "feat-story-title": "Nwunye Gọvanọ Kpọkọtara Nkwado Maka Ifechukwu na Regina Caeli Hospital",
+        "feat-story-desc": "N'ịgbaso akụkọ banyere nwa agbọghọ na-alụso ọrịa HIV ọgụ, ANSACA na Her Excellency, Chief Dr. Mrs. Nonye Soludo, wepụtara nkwado enyemaka mmadụ.",
+        "feat-story-body-1": "Her Excellency tinyere aka ozugbo site na Healthy Living Initiative, na-enye nkwado maka ọgwụgwọ na ọdịmma nwa ahù. Nzaghachi a na-egosipụta ntinye aka nke ọchịchị Soludo n'ichebe ahụike na ugwu nke Ndi Anambra.",
+        "feat-story-body-2": "Ndị nnọchi anya jikọrọ ọnụ wetara nri, ihe eji elekọta mmadụ, na nkwado ego. Dr. Nkem Okeke mesiri obi ike na ntinye aka a ga-abụ nke na-aga n'ihu iji hụ na nwa ahụ gbakere kpamkpam.",
+        "feat-story-quote": "Ngwọta Adịla! Mara ọkwa gị. Nọgidenụ na-enwe ahụike. Chebe ndị ọzọ.",
 
         // Testimonials Section
         "testimonials-tag": "OLU OBODO",
