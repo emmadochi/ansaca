@@ -66,6 +66,39 @@ document.addEventListener('DOMContentLoaded', () => {
     window.ANSACA_I18N.refreshIcons();
 });
 
+// Handle Preloader Dismissal on Window Load
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const progress = document.querySelector('.preloader-progress');
+    const content = document.querySelector('.preloader-content');
+    
+    const tl = gsap.timeline();
+    
+    // Smoothly finish progress bar
+    tl.to(progress, {
+        x: '0%',
+        duration: 0.8,
+        ease: 'power2.inOut'
+    })
+    // Fade out central content
+    .to(content, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.5,
+        ease: 'power2.in'
+    })
+    // Slide up the entire preloader overlay
+    .to(preloader, {
+        y: '-100%',
+        duration: 0.8,
+        ease: 'power4.inOut'
+    })
+    // Remove from DOM to keep it clean
+    .set(preloader, { display: 'none' })
+    // Re-enable scroll (if it was disabled)
+    .set(document.body, { overflow: 'auto' });
+});
+
 // Initialize Lenis Smooth Scroll
 const lenis = new Lenis({
     duration: 1.2,
