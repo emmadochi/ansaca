@@ -59,7 +59,7 @@
 
     <!-- Navigation -->
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-300 bg-white border-b border-gray-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -76,6 +76,7 @@
                     <a href="index.html" data-i18n="nav-home" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Home</a>
                     <a href="about.html" data-i18n="nav-about" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">About Us</a>
                     <a href="services.html" data-i18n="nav-services" class="text-sm font-medium text-secondary">Services</a>
+                    <a href="strategic-plan.html" data-i18n="nav-strategic" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Strategic Plan</a>
                     <a href="impact.html" data-i18n="nav-impact" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Impact</a>
                     <a href="contact.html" data-i18n="nav-contact" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Contact</a>
                     
@@ -134,6 +135,9 @@
                 </a>
                 <a href="services.html" class="flex items-center gap-4 py-3 px-4 rounded-xl bg-white/10 text-secondary text-lg font-heading font-bold border border-white/10">
                     <i data-lucide="heart-pulse" class="w-[18px] h-[18px]"></i> <span data-i18n="nav-services">Services</span>
+                </a>
+                <a href="strategic-plan.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="sparkles" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-strategic">Strategic Plan</span>
                 </a>
                 <a href="impact.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
                     <i data-lucide="bar-chart-3" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-impact">Our Impact</span>
@@ -196,89 +200,172 @@
         <div class="absolute top-0 left-0 w-full h-[600px] bg-primary/5 rounded-br-[100px]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 section-header">
-                <h2 data-i18n="services-header-tag" class="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Public Health Services</h2>
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20 section-header">
+                <h2 data-i18n="services-header-tag" class="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Our Services</h2>
                 <h3 data-i18n="services-header-title" class="font-heading text-4xl font-bold text-gray-900 mb-4">Comprehensive Care & Support</h3>
                 <p data-i18n="services-header-desc" class="text-gray-600 text-lg">We provide a wide range of services designed to educate, protect, and support the communities of Anambra State.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
-                    <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 relative z-10">
-                        <i data-lucide="flask-conical"></i>
+            <!-- Group 1: Prevention & Epidemic Control -->
+            <div class="mb-20">
+                <div class="flex items-center gap-3 mb-10 border-b border-gray-100 pb-4">
+                    <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+                        <i data-lucide="shield" class="w-5 h-5"></i>
                     </div>
-                    <h4 data-i18n="service-1-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">HIV Testing & Counseling</h4>
-                    <p data-i18n="service-1-desc" class="text-gray-600 mb-6 relative z-10">Free, confidential testing centers across the state with professional counseling support.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10">
-                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+                    <h3 data-i18n="services-prevention-title" class="font-heading text-2xl font-bold text-gray-900">Prevention & Epidemic Control</h3>
                 </div>
 
-                <!-- Service Card 2 -->
-                <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
-                    <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-6 relative z-10">
-                        <i data-lucide="radio"></i>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- KYS-WI Campaigns -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 relative z-10">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-kyswi-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Quarterly KYS-WI Campaigns</h4>
+                        <p data-i18n="service-kyswi-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">State-wide 'Know Your Status, Win Incentives' (KYS-WI) mobile campaigns reaching markets and parks.</p>
+                        <a href="index.html#testing" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <h4 data-i18n="service-2-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Awareness Campaigns</h4>
-                    <p data-i18n="service-2-desc" class="text-gray-600 mb-6 relative z-10">State-wide media and grassroots campaigns to educate the public and reduce stigma.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10">
-                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+
+                    <!-- Moonlight Testing Clinics -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-6 relative z-10">
+                            <i data-lucide="moon" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-moonlight-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Moonlight Testing Clinics</h4>
+                        <p data-i18n="service-moonlight-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Night-time testing clinics tailored for key populations and high-risk environments.</p>
+                        <a href="index.html#testing" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Permanent Testing Booths -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6 relative z-10">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-booths-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Permanent Testing Booths</h4>
+                        <p data-i18n="service-booths-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Fixed, walk-in testing and counseling booths strategically located in high-traffic commercial hubs.</p>
+                        <a href="index.html#testing" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Youth School Clubs -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 mb-6 relative z-10">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-clubs-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Youth School Clubs</h4>
+                        <p data-i18n="service-clubs-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">HIV awareness clubs in secondary and tertiary institutions to educate and empower students.</p>
+                        <a href="contact.html" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Toll-Free Helpline -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-500 mb-6 relative z-10">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-helpline-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Toll-Free Telehealth Helpline</h4>
+                        <p data-i18n="service-helpline-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Confidential, 24/7 tele-counseling, support and referral services via 0906 048 6600.</p>
+                        <a href="tel:09060486600" class="inline-flex items-center text-accent font-semibold relative z-10 text-sm">
+                            Call Now: 0906 048 6600 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2: Treatment, Care & Support -->
+            <div class="mb-24">
+                <div class="flex items-center gap-3 mb-10 border-b border-gray-100 pb-4">
+                    <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </div>
+                    <h3 data-i18n="services-treatment-title" class="font-heading text-2xl font-bold text-gray-900">Treatment, Care & Support</h3>
                 </div>
 
-                <!-- Service Card 3 -->
-                <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
-                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6 relative z-10">
-                        <i data-lucide="users-round"></i>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Mobile Riverine Clinics -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-6 relative z-10">
+                            <i data-lucide="anchor" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-riverine-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Mobile Riverine Clinics</h4>
+                        <p data-i18n="service-riverine-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Dedicated boat outreach clinics bringing prevention and treatment to hard-to-reach riverine communities.</p>
+                        <a href="contact.html" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <h4 data-i18n="service-3-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Community Outreach</h4>
-                    <p data-i18n="service-3-desc" class="text-gray-600 mb-6 relative z-10">Direct engagement with rural communities, markets, and local leadership to foster awareness.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10">
-                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
 
-                <!-- Service Card 4 -->
-                <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
-                    <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 mb-6 relative z-10">
-                        <i data-lucide="graduation-cap"></i>
+                    <!-- PrEP & PEP Scale-Up -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-600 mb-6 relative z-10">
+                            <i data-lucide="pill" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-prep-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">PrEP & PEP Scale-Up</h4>
+                        <p data-i18n="service-prep-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Widespread distribution and clinical support for Pre-Exposure and Post-Exposure Prophylaxis at care facilities.</p>
+                        <a href="contact.html" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3 relative z-10">Youth Education</h4>
-                    <p class="text-gray-600 mb-6 relative z-10">Targeted programs in schools and universities to equip the younger generation with knowledge.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10">
-                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
 
-                <!-- Service Card 5 -->
-                <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-600 mb-6 relative z-10">
-                        <i data-lucide="pill"></i>
+                    <!-- Universal PMTCT Scaling -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-600 mb-6 relative z-10">
+                            <i data-lucide="heart" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-pmtct-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">Universal PMTCT Scaling</h4>
+                        <p data-i18n="service-pmtct-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Eliminating mother-to-child transmission through early diagnosis and antiretroviral treatment for pregnant mothers.</p>
+                        <a href="contact.html" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3 relative z-10">Treatment Support</h4>
-                    <p class="text-gray-600 mb-6 relative z-10">Ensuring steady access to ARVs, medical care, and psycho-social support for people living with HIV.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10">
-                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
 
-                <!-- Service Card 6 -->
-                <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-6 relative z-10">
-                        <i data-lucide="handshake"></i>
+                    <!-- PLHIV Socio-Economic Empowerment -->
+                    <div class="service-card group bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-600 mb-6 relative z-10">
+                            <i data-lucide="handshake" class="w-6 h-6"></i>
+                        </div>
+                        <h4 data-i18n="service-empower-title" class="text-xl font-bold text-gray-900 mb-3 relative z-10">PLHIV Socio-Economic Empowerment</h4>
+                        <p data-i18n="service-empower-desc" class="text-gray-600 mb-6 relative z-10 text-sm leading-relaxed">Vocational training and seed grants to support financial independence and combat stigma for people living with HIV.</p>
+                        <a href="contact.html" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10 text-sm">
+                            <span data-i18n="learn-more">Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3 relative z-10">Partnerships & Advocacy</h4>
-                    <p class="text-gray-600 mb-6 relative z-10">Collaborating with NGOs, international health bodies, and local stakeholders for greater impact.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors relative z-10">
-                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+                </div>
+            </div>
+
+            <!-- Group 3: Volunteer Signup Block (HIV Awareness Brigade) -->
+            <div class="bg-gradient-to-br from-primary via-primary to-secondary text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-grid-white/[0.03] bg-row"></div>
+                <!-- Decorative Glows -->
+                <div class="absolute -top-24 -right-24 w-80 h-80 bg-secondary/30 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <span class="px-4 py-1.5 rounded-full bg-white/10 text-secondary text-xs font-bold uppercase tracking-wider mb-4 inline-block border border-white/10">Grassroots Mobilisation</span>
+                        <h3 data-i18n="services-hab-title" class="font-heading text-3xl font-bold mb-4">Join the HIV Awareness Brigade (HAB)</h3>
+                        <p data-i18n="services-hab-desc" class="text-white/80 text-base max-w-xl leading-relaxed">Become part of the grassroots movement with 1,693 active volunteers across all 326 wards of Anambra State.</p>
+                    </div>
+                    <div class="text-left md:text-right">
+                        <a href="contact.html?type=volunteer" data-i18n="services-hab-cta" class="px-8 py-4 bg-secondary text-white font-semibold rounded-xl hover:bg-opacity-95 transition-all shadow-xl hover:shadow-2xl hover:scale-105 inline-block">
+                            Register as a Volunteer
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,9 +408,9 @@
                     <ul class="space-y-3">
                         <li><a href="about.html" class="text-white/70 hover:text-white transition-colors text-sm">About ANSACA</a></li>
                         <li><a href="services.html" class="text-white/70 hover:text-white transition-colors text-sm">Our Services</a></li>
-                        <li><a href="#news" class="text-white/70 hover:text-white transition-colors text-sm">News & Updates</a></li>
+                        <li><a href="strategic-plan.html" class="text-white/70 hover:text-white transition-colors text-sm">Strategic Plan 2026-2028</a></li>
+                        <li><a href="impact.html" class="text-white/70 hover:text-white transition-colors text-sm">Our Impact</a></li>
                         <li><a href="contact.html" class="text-white/70 hover:text-white transition-colors text-sm">Contact Us</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Volunteer Program</a></li>
                     </ul>
                 </div>
                 

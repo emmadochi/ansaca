@@ -59,7 +59,7 @@
 
     <!-- Navigation -->
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-300 bg-white border-b border-gray-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -76,8 +76,9 @@
                     <a href="index.html" data-i18n="nav-home" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Home</a>
                     <a href="about.html" data-i18n="nav-about" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">About Us</a>
                     <a href="services.html" data-i18n="nav-services" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Services</a>
-                    <a href="impact.html" data-i18n="nav-impact" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Impact</a>
-                    <a href="contact.html" data-i18n="nav-contact" class="text-sm font-medium text-secondary">Contact</a>
+                    <a href="strategic-plan.html" data-i18n="nav-strategic" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Strategic Plan</a>
+                    <a href="impact.html" data-i18n="nav-impact" class="text-sm font-medium text-gray-700 hover:text-secondary transition-colors">Our Impact</a>
+                    <a href="contact.html" data-i18n="nav-contact" class="text-sm font-medium text-secondary font-semibold">Contact</a>
                     
                     <!-- Language Toggle -->
                     <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100/50 border border-gray-200 ml-4">
@@ -134,6 +135,9 @@
                 </a>
                 <a href="services.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
                     <i data-lucide="heart-pulse" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-services">Services</span>
+                </a>
+                <a href="strategic-plan.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
+                    <i data-lucide="sparkles" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-strategic">Strategic Plan</span>
                 </a>
                 <a href="impact.html" class="flex items-center gap-4 py-3 px-4 rounded-xl text-white text-lg font-heading font-bold hover:bg-white/5 transition-all">
                     <i data-lucide="bar-chart-3" class="w-[18px] h-[18px] text-secondary"></i> <span data-i18n="nav-impact">Our Impact</span>
@@ -306,6 +310,113 @@
                         </button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-softGray border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                    <i data-lucide="help-circle" class="w-4 h-4 text-secondary"></i>
+                    <span data-i18n="faq-tag" class="text-xs font-bold text-secondary uppercase tracking-widest">Common Inquiries</span>
+                </div>
+                <h2 data-i18n="faq-title" class="font-heading text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p data-i18n="faq-desc" class="text-gray-600 text-lg">Find quick answers to common questions about our services, testing, and the Strategic Plan.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q1" class="font-heading font-bold text-lg">Is HIV testing free at ANSACA centers?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a1">Yes, all HIV testing, counseling, and Anti-Retroviral Therapy (ART) provided by ANSACA and our partner public health facilities are completely free of charge.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q2" class="font-heading font-bold text-lg">How can I volunteer for the HIV Awareness Brigade (HAB)?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a2">You can join the HAB by registering through the volunteer portal on our Services page. We are currently recruiting volunteers across all 326 wards in Anambra State.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q3" class="font-heading font-bold text-lg">What does the 95-95-95 target mean?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a3">It is a global UNAIDS target aiming for 95% of people living with HIV to know their status, 95% of those diagnosed to receive sustained ART, and 95% of those on ART to achieve viral suppression by 2030.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q4" class="font-heading font-bold text-lg">Are my anonymous inquiries truly confidential?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a4">Absolutely. The anonymous inquiry tool does not collect names, emails, or IP addresses. Your data is end-to-end encrypted to protect your privacy and dignity.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 5 (Myth) -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q5" class="font-heading font-bold text-lg">Myth: HIV can be transmitted by mosquitoes or sharing food.</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a5"><span class="font-bold text-secondary">Fact:</span> HIV is only transmitted through specific bodily fluids (blood, semen, vaginal fluids, and breast milk). It cannot survive outside the body and cannot be transmitted through mosquito bites, sharing utensils, hugging, or casual contact.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 6 (Myth) -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q6" class="font-heading font-bold text-lg">Myth: An HIV diagnosis is a death sentence.</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a6"><span class="font-bold text-secondary">Fact:</span> With modern Anti-Retroviral Therapy (ART), people living with HIV can achieve viral suppression, live long, healthy lives, and have the exact same life expectancy as someone without HIV.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 7 (Myth) -->
+                <details class="group bg-white rounded-2xl border border-gray-200 overflow-hidden open:shadow-lg transition-all duration-300">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 group-open:text-secondary group-open:bg-gray-50 transition-colors">
+                        <span data-i18n="faq-q7" class="font-heading font-bold text-lg">Myth: You can tell if someone has HIV by looking at them.</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:text-secondary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 bg-gray-50 border-t border-gray-100 mt-0 pt-4 leading-relaxed">
+                        <p data-i18n="faq-a7"><span class="font-bold text-secondary">Fact:</span> Many people living with HIV look completely healthy and may show no symptoms for years. The only reliable way to know someone's status—including your own—is to get tested.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
